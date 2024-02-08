@@ -28,6 +28,7 @@ const serverCleanup = useServer(
 // create apollo server
 const apolloServer = new ApolloServer({
   schema,
+  introspection: true,
   plugins: [
     // Proper shutdown for the HTTP server.
     ApolloServerPluginDrainHttpServer({ httpServer }),
